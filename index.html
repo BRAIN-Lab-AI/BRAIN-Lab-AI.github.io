@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website for our research group: projects, publications, people, news, and open positions." />
+  <title>Our Research Group</title>
+  <style>
+    :root{
+      --bg: #0f172a;          /* slate-900 */
+      --panel: #0b1225;       /* custom dark */
+      --text: #e2e8f0;        /* slate-200 */
+      --muted: #94a3b8;       /* slate-400 */
+      --brand: #60a5fa;       /* blue-400 */
+      --accent: #34d399;      /* emerald-400 */
+      --border: #1e293b;      /* slate-800 */
+      --card: #111827;        /* gray-900 */
+      --link: #93c5fd;        /* blue-300 */
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #ffffff;
+        --panel: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --brand: #2563eb;
+        --accent: #059669;
+        --border: #e2e8f0;
+        --card: #f8fafc;
+        --link: #1d4ed8;
+      }
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.15), transparent 60%),
+                              radial-gradient(800px 400px at -10% 10%, rgba(52,211,153,.12), transparent 50%),
+                              var(--bg);
+    }
+    .container{max-width:1100px; margin:0 auto; padding: 0 20px}
+    a{color:var(--link); text-decoration: none}
+    a:hover{ text-decoration: underline }
+
+    /* Header */
+    header{ position: sticky; top:0; z-index:40; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in oklab, var(--panel) 85%, transparent); border-bottom:1px solid var(--border)}
+    .nav{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0}
+    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:700; letter-spacing:.2px }
+    .brand .logo{ width:32px; height:32px; display:grid; place-items:center; border-radius:12px; background: linear-gradient(135deg, var(--brand), var(--accent)); color:white; font-weight:900}
+    nav ul{ list-style:none; display:flex; gap:1rem; padding:0; margin:0}
+    nav a{ padding:8px 10px; border-radius:10px }
+    nav a:hover{ background: color-mix(in oklab, var(--brand) 25%, transparent) }
+
+    /* Hero */
+    .hero{ padding: 64px 0 36px; text-align:center }
+    .hero h1{ font-size: clamp(28px, 4vw, 44px); margin: 8px 0 10px; line-height:1.2 }
+    .kicker{ color: var(--brand); font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:.9rem }
+    .hero p{ color:var(--muted); max-width: 780px; margin: 0 auto }
+    .cta{ margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
+    .btn{ display:inline-block; padding:10px 16px; border-radius:12px; font-weight:600; border:1px solid var(--border); background:var(--card); color:var(--text) }
+    .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--accent)); color:white; border:none }
+
+    /* Sections */
+    section{ padding: 48px 0; border-top:1px dashed var(--border)}
+    section h2{ font-size: clamp(22px, 3vw, 30px); margin: 0 0 8px }
+    section .sub{ color: var(--muted); margin-top:-4px }
+
+    .grid{ display:grid; gap:16px; grid-template-columns: repeat(12, 1fr) }
+    .col-4{ grid-column: span 4 }
+    .col-6{ grid-column: span 6 }
+    .col-12{ grid-column: span 12 }
+    @media (max-width:900px){ .col-4,.col-6{ grid-column: span 12 } }
+
+    .card{ background: color-mix(in oklab, var(--card) 92%, transparent); border:1px solid var(--border); border-radius:16px; padding:16px }
+    .card h3{ margin:0 0 6px; font-size: 1.05rem }
+    .meta{ color: var(--muted); font-size:.92rem }
+
+    /* People */
+    .person{ display:flex; gap:12px; align-items:center }
+    .avatar{ width:56px; height:56px; border-radius:14px; background: linear-gradient(135deg, var(--brand), var(--accent)); display:grid; place-items:center; font-weight:800; color:white }
+
+    /* Footer */
+    footer{ text-align:center; padding: 36px 0; color: var(--muted) }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">RG</div>
+        <div>Our Research Group</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Research</a></li>
+          <li><a href="#pubs">Publications</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#openings" class="btn">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="kicker">University / Institute Name</div>
+      <h1>Intelligent Sensing & Vision Lab</h1>
+      <p>
+        We develop machine learning and signal processing methods for healthcare, computer vision, and human-centered AI. Our current focus includes microwave imaging for stroke detection, 3D/4D facial expression analysis, and multimodal vision-language models.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#openings">Join us</a>
+        <a class="btn" href="#pubs">Read our papers</a>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About</h2>
+      <p class="sub">What we do and why it matters</p>
+      <p>
+        Our group advances foundational and applied research at the intersection of sensing, machine learning, and human health. We collaborate with clinical and industry partners to translate algorithms into real-world impact, with open-source tools and reproducible science as core principles.
+      </p>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Research</h2>
+      <p class="sub">Current projects and directions</p>
+      <div class="grid">
+        <article class="card col-4">
+          <h3>Microwave Imaging for Stroke</h3>
+          <div class="meta">Signal processing • Tomographic reconstruction</div>
+          <p>Fast brain imaging from multi-antenna S-parameters (S11, S21…) using physics-informed learning for early stroke detection.</p>
+          <p><a href="#">Project page</a></p>
+        </article>
+        <article class="card col-4">
+          <h3>3D/4D Facial Expression Recognition</h3>
+          <div class="meta">Vision-language models • Multiview</div>
+          <p>Self-supervised multi-view representation learning for robust emotion understanding across views and time.</p>
+          <p><a href="#">Dataset / code</a></p>
+        </article>
+        <article class="card col-4">
+          <h3>Healthcare AI for Insurers</h3>
+          <div class="meta">NLP • Decision support</div>
+          <p>Automating pre-authorization and claims review with trustworthy AI systems to reduce delays and improve outcomes.</p>
+          <p><a href="#">Whitepaper</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pubs" class="container">
+      <h2>Publications</h2>
+      <p class="sub">Selected, with links to PDFs and code</p>
+      <div class="card">
+        <ol>
+          <li>
+            <strong>SMILE-VLM: Self-Supervised Multi-View Representation Learning for 3D/4D Facial Expression Recognition</strong><br>
+            <span class="meta">A. YourName, B. Collaborator — 2025. <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></span>
+          </li>
+          <li>
+            <strong>Microwave Imaging for Rapid Stroke Assessment from S-Parameters</strong><br>
+            <span class="meta">C. YourName, D. Collaborator — 2025. <a href="#">PDF</a> · <a href="#">Code</a></span>
+          </li>
+          <li>
+            <strong>Knowledge Distillation in Medical Imaging: A Survey</strong><br>
+            <span class="meta">E. YourName et al. — 2024. <a href="#">PDF</a> · <a href="#">arXiv</a></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="people" class="container">
+      <h2>People</h2>
+      <p class="sub">We are hiring at all levels</p>
+      <div class="grid">
+        <div class="card col-6 person">
+          <div class="avatar" aria-hidden="true">PI</div>
+          <div>
+            <h3>Prof. Principal Investigator</h3>
+            <div class="meta">Email: <a href="mailto:pi@example.edu">pi@example.edu</a> · <a href="#">Google Scholar</a> · <a href="#">GitHub</a></div>
+            <p>Leads the group. Research in sensing, inverse problems, and multimodal learning.</p>
+          </div>
+        </div>
+        <div class="card col-6 person">
+          <div class="avatar" aria-hidden="true">M1</div>
+          <div>
+            <h3>Graduate Student</h3>
+            <div class="meta"><a href="#">Homepage</a> · <a href="#">Scholar</a></div>
+            <p>3D/4D emotion recognition and VLMs.</p>
+          </div>
+        </div>
+        <div class="card col-6 person">
+          <div class="avatar" aria-hidden="true">M2</div>
+          <div>
+            <h3>Graduate Student</h3>
+            <div class="meta"><a href="#">Homepage</a></div>
+            <p>Microwave imaging and reconstruction.</p>
+          </div>
+        </div>
+        <div class="card col-6 person">
+          <div class="avatar" aria-hidden="true">RA</div>
+          <div>
+            <h3>Research Assistant</h3>
+            <div class="meta"><a href="#">GitHub</a></div>
+            <p>Tooling, datasets, and benchmarks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="container">
+      <h2>News</h2>
+      <p class="sub">Recent updates</p>
+      <div class="grid">
+        <div class="card col-12">
+          <ul>
+            <li><strong>Sep 2025:</strong> Our paper on SMILE-VLM is accepted—congrats team!</li>
+            <li><strong>Aug 2025:</strong> Talk: “Vision-Language Models in the Age of Multimodal AI.”</li>
+            <li><strong>Jun 2025:</strong> Research grant awarded for stroke detection via microwave imaging.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="openings" class="container">
+      <h2>Open Positions</h2>
+      <p class="sub">PhD, MSc, RAs, and interns</p>
+      <div class="grid">
+        <div class="card col-12">
+          <p>
+            We welcome applicants with backgrounds in machine learning, computer vision, signal processing, and biomedical engineering. To apply, send your CV, transcripts, and a short statement to <a href="mailto:lab@example.edu">lab@example.edu</a> with subject line <em>“Application: [Your Name] — 2025”</em>.
+          </p>
+          <p class="meta">Tips: include links to code/papers, and mention how your interests align with our projects.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Our Research Group · Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
