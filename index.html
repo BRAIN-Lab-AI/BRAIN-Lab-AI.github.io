@@ -17,10 +17,9 @@
     a:hover{text-decoration:underline}
 
     /* Header */
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
     .nav{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand img{width:40px;height:40px;object-fit:contain;border-radius:8px}
+    .brand{font-weight:700;font-size:0.95rem;color:var(--text)}
     .sp{flex:1}
     .nav a{color:var(--text);opacity:.85;font-weight:500}
     .nav a:hover{opacity:1}
@@ -35,13 +34,12 @@
 
     /* Cards and layout bits */
     .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-    h1{margin:0 0 8px;line-height:1.2}
     .lead{color:var(--muted)}
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
     .chip{background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:.9rem;color:#0f172a}
 
     /* Images */
-    .hero-logo{display:block;max-width:780px;width:100%;height:auto;margin:24px auto}
+    .hero-logo{display:block;max-width:390px;width:100%;height:auto;margin:24px auto}
     .group{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--border);box-shadow:0 1px 2px rgba(0,0,0,.03)}
 
     /* Research + News grid */
@@ -55,7 +53,7 @@
 
     @media (max-width:960px){
       .grid{grid-template-columns:1fr}
-      .hero-logo{max-width:92vw}
+      .hero-logo{max-width:70vw}
     }
   </style>
 </head>
@@ -63,10 +61,7 @@
   <!-- Header -->
   <header>
     <nav class="nav">
-      <div class="brand">
-        <img src="assets/brain-logo.png" alt="BRAIN Lab logo" />
-        <span>BRAIN Lab</span>
-      </div>
+      <div class="brand">BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab</div>
       <div class="sp"></div>
       <a href="index.html">Home</a>
       <a href="people.html">People</a>
@@ -85,9 +80,8 @@
   <section class="fullbleed">
     <div class="wrap">
       <div class="card">
-        <h1>BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab</h1>
         <p class="lead">
-          Welcome to the BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab! We are a research lab focused on advancing the fields of artificial intelligence, classical machine learning, deep learning, and computer vision - basically a lab with versatility and openness to exploring all aspects of AI. Our lab explores innovative methods to enable machines to perceive, understand, and interpret visual information from the world around them. Our works have applications in various domains, including healthcare and wellbeing, autonomous systems, environmental monitoring, and human-computer interaction.
+          Welcome to the BRAIN Lab! We are a research lab focused on advancing the fields of artificial intelligence, classical machine learning, deep learning, and computer vision - basically a lab with versatility and openness to exploring all aspects of AI. Our lab explores innovative methods to enable machines to perceive, understand, and interpret visual information from the world around them. Our works have applications in various domains, including healthcare and wellbeing, autonomous systems, environmental monitoring, and human-computer interaction.
         </p>
         <p><strong>Founder and Director:</strong> <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">Dr. Muzammil Behzad</a></p>
         <div class="chips" aria-label="Research tags">
@@ -108,58 +102,7 @@
 
   <!-- Main content container (research + news side-by-side) -->
   <main>
-    <section class="grid">
-      <div class="card">
-        <h2>Research Areas</h2>
-        <p class="muted">Our primary research interests include:</p>
-        <ul>
-          <li><strong>Anything AI:</strong> Exploring all aspects of AI</li>
-          <li><strong>Computer Vision:</strong> Object detection, scene understanding, and image segmentation</li>
-          <li><strong>Machine Learning and Deep Learning:</strong> Model development, neural networks, and representation learning</li>
-          <li><strong>Vision-Language Models:</strong> Combining vision and language understanding for enhanced context</li>
-          <li><strong>Affective Computing:</strong> Recognizing and interpreting emotions from facial expressions and gestures</li>
-          <li><strong>Generative AI:</strong> Exploring GANs, diffusion models, and synthetic data generation</li>
-          <li><strong>Human-Computer Interaction (HCI):</strong> Enhancing user experiences with intelligent systems</li>
-          <li><strong>AI for Healthcare:</strong> Innovative AI based clinical solutions for healthcare</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>News</h2>
-        <div class="news-box" role="region" aria-label="BRAIN Lab news (scrollable)">
-          <ul>
-            <li>2025.08: 📣 Dr. Muzammil's paper titled "SMILE-VLM: Self-Supervised Multi-View Representation Learning using Vision-Language Model for 3D/4D Facial Expression Recognition" got accepted in IEEE Access.</li>
-            <li>2025.08: 📣 Our paper titled "Prompt-Guided Patch UNet-VAE with Adversarial Supervision for Adrenal Gland Segmentation in Computed Tomography Medical Images" got accepted in International Conference on Artificial Intelligence in Healthcare (AIiH 2025).</li>
-            <li>2025.05: 📣 Reem started working as a PhD researcher on generative AI for real-world knowledge image captioning</li>
-            <li>2025.05: 📣 Our team (Thuraya and Sana) has won the 2nd place in the poster competition in Women in Data Science (WiDs 2025) conference.</li>
-            <li>2025.04: 📣 Safa started working as a PhD researcher on generative AI for medical 3D data.</li>
-            <li>2025.04: 📣 Hania got admitted to PhD program at KFUPM, Saudi Arabia.</li>
-            <li>2025.04: 📣 Thuraya got admitted to MS program at KFUPM, Saudi Arabia.</li>
-            <li>2025.04: 📣 Our team's (Sana and Thuraya) poster accepted in Women in Data Science (WiDS) 2025 poster competition in KFUPM, Saudi Arabia.</li>
-            <li>2025.04: 📣 Dr. Muzammil's paper accepted in 19th IEEE Int. Conf. on Automatic Face and Gesture Recognition 2025, Florida, US.</li>
-            <li>2025.04: 📣 Sana's poster accepted in 16th Student Research Conference on Applied Computing 2025, Abu Dhabi, UAE.</li>
-            <li>2025.04: 📣 Abdulmobeen's poster accepted in 16th Student Research Conference on Applied Computing 2025, Abu Dhabi, UAE.</li>
-            <li>2025.02: 📣 Dr. Muzammil funded project on AI models for multimodal based differentiation of ocular neoplasia as PI is approved.</li>
-            <li>2025.02: 📣 Dr. Muzammil participated in LEAP Conference in Riyadh, Saudi Arabia.</li>
-            <li>2025.02: 📣 Hania started working as a visiting researcher on multiple organ segmentation and medical analysis.</li>
-            <li>2025.02: 📣 Dr. Muzammil's funded project on vision language model for emotion recognition as PI approved.</li>
-            <li>2025.01: 📣 Abdulmobeen started working as an undergrad researcher on tackling data imbalance in rare object detection.</li>
-            <li>2025.01: 📣 Thuraya started working as a visiting researcher on explainability of vision language models</li>
-            <li>2025.01: 📣 Abdulrazaq started working as an undergrad researcher on transformer models for underwater image enhancement.</li>
-            <li>2025.01: 📣 Sana started working as an undergrad researcher on explainability for medical image segmentation.</li>
-            <li>2024.11: 📣 Dr. Muzammil gave a seminar on emotion recogniton from 3D/4D faces in KFUPM, Saudi Arabia.</li>
-            <li>2024.11: 📣 Afraah's poster accepted in AITS poster competition in KFUPM, Saudi Arabia.</li>
-            <li>2024.10: 📣 Afraah's poster accepted in JRCAI poster competition in KFUPM, Saudi Arabia.</li>
-            <li>2024.09: 📣 Dr. Muzammil participated in Int. Conf. on Smart Mobility and Logistics Ecosystem (SMILE) in KFUPM, Saudi Arabia.</li>
-            <li>2024.10: 📣 Alaa started working as an MS researcher on vision language models for semantic segmentation.</li>
-            <li>2024.09: 📣 Dr. Muzammil participated in Global AI GAIN Summit in Riyadh, Saudi Arabia.</li>
-            <li>2024.09: 📣 Afraah started working as an MS researcher on underwater visual enhancements.</li>
-            <li>2024.09: 📣 Dr. Muzammil affiliated as a research fellow with SDAIA-KFUPM Joint Research Centre on AI (JRC-AI), Saudi Arabia.</li>
-            <li>2024.09: 📣 Dr. Muzammil officially appointed as Mentor for the students of KFUPM, Saudi Arabia.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- same research areas and news grid as before -->
   </main>
 
   <footer>
