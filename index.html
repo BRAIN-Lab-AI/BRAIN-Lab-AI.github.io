@@ -3,247 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official website for our research group: projects, publications, people, news, and open positions." />
-  <title>Our Research Group</title>
+  <title>BRAIN Lab — Breakthrough Research in Next Gen AI Networks Lab</title>
+  <meta name="description" content="BRAIN Lab: AI, ML, Deep Learning, Computer Vision, VLMs, Generative AI, Affective Computing, AI for Healthcare." />
+  <link rel="icon" href="https://raw.githubusercontent.com/BRAIN-Lab-AI/.github/main/profile/BRAINLogo.png" />
   <style>
-    :root{
-      --bg: #0f172a;          /* slate-900 */
-      --panel: #0b1225;       /* custom dark */
-      --text: #e2e8f0;        /* slate-200 */
-      --muted: #94a3b8;       /* slate-400 */
-      --brand: #60a5fa;       /* blue-400 */
-      --accent: #34d399;      /* emerald-400 */
-      --border: #1e293b;      /* slate-800 */
-      --card: #111827;        /* gray-900 */
-      --link: #93c5fd;        /* blue-300 */
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg: #ffffff;
-        --panel: #ffffff;
-        --text: #0f172a;
-        --muted: #475569;
-        --brand: #2563eb;
-        --accent: #059669;
-        --border: #e2e8f0;
-        --card: #f8fafc;
-        --link: #1d4ed8;
-      }
-    }
-    html,body{height:100%}
-    body{
-      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text); background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.15), transparent 60%),
-                              radial-gradient(800px 400px at -10% 10%, rgba(52,211,153,.12), transparent 50%),
-                              var(--bg);
-    }
-    .container{max-width:1100px; margin:0 auto; padding: 0 20px}
-    a{color:var(--link); text-decoration: none}
-    a:hover{ text-decoration: underline }
-
-    /* Header */
-    header{ position: sticky; top:0; z-index:40; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in oklab, var(--panel) 85%, transparent); border-bottom:1px solid var(--border)}
-    .nav{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0}
-    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:700; letter-spacing:.2px }
-    .brand .logo{ width:32px; height:32px; display:grid; place-items:center; border-radius:12px; background: linear-gradient(135deg, var(--brand), var(--accent)); color:white; font-weight:900}
-    nav ul{ list-style:none; display:flex; gap:1rem; padding:0; margin:0}
-    nav a{ padding:8px 10px; border-radius:10px }
-    nav a:hover{ background: color-mix(in oklab, var(--brand) 25%, transparent) }
-
-    /* Hero */
-    .hero{ padding: 64px 0 36px; text-align:center }
-    .hero h1{ font-size: clamp(28px, 4vw, 44px); margin: 8px 0 10px; line-height:1.2 }
-    .kicker{ color: var(--brand); font-weight:700; letter-spacing:.04em; text-transform:uppercase; font-size:.9rem }
-    .hero p{ color:var(--muted); max-width: 780px; margin: 0 auto }
-    .cta{ margin-top:22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
-    .btn{ display:inline-block; padding:10px 16px; border-radius:12px; font-weight:600; border:1px solid var(--border); background:var(--card); color:var(--text) }
-    .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--accent)); color:white; border:none }
-
-    /* Sections */
-    section{ padding: 48px 0; border-top:1px dashed var(--border)}
-    section h2{ font-size: clamp(22px, 3vw, 30px); margin: 0 0 8px }
-    section .sub{ color: var(--muted); margin-top:-4px }
-
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(12, 1fr) }
-    .col-4{ grid-column: span 4 }
-    .col-6{ grid-column: span 6 }
-    .col-12{ grid-column: span 12 }
-    @media (max-width:900px){ .col-4,.col-6{ grid-column: span 12 } }
-
-    .card{ background: color-mix(in oklab, var(--card) 92%, transparent); border:1px solid var(--border); border-radius:16px; padding:16px }
-    .card h3{ margin:0 0 6px; font-size: 1.05rem }
-    .meta{ color: var(--muted); font-size:.92rem }
-
-    /* People */
-    .person{ display:flex; gap:12px; align-items:center }
-    .avatar{ width:56px; height:56px; border-radius:14px; background: linear-gradient(135deg, var(--brand), var(--accent)); display:grid; place-items:center; font-weight:800; color:white }
-
-    /* Footer */
-    footer{ text-align:center; padding: 36px 0; color: var(--muted) }
+    :root { --bg:#0b1220; --card:#111a2b; --text:#e9eef7; --muted:#b8c2d9; --acc:#66e3ff; --chip:#1a2741; --link:#9be7ff; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1220,#0b1326);color:var(--text)}
+    a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(11,18,32,.85);backdrop-filter:blur(8px);border-bottom:1px solid #1c2740;z-index:10}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;gap:18px;align-items:center}
+    .nav .sp{flex:1}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand img{width:36px;height:36px;border-radius:8px}
+    main{max-width:1200px;margin:32px auto;padding:0 20px;display:grid;gap:28px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .card{background:var(--card);border:1px solid #1c2740;border-radius:18px;padding:22px}
+    h1{margin:0 0 10px;font-size:2rem} h2{margin:0 0 12px;font-size:1.25rem}
+    p{color:var(--muted);line-height:1.6}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{background:var(--chip);border:1px solid #273553;color:#d8e6ff;padding:6px 10px;border-radius:20px;font-size:.9rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid .card h3{margin:0 0 6px;font-size:1.05rem}
+    footer{border-top:1px solid #1c2740;color:var(--muted);padding:24px 20px;margin-top:20px}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
+    <nav class="nav">
       <div class="brand">
-        <div class="logo">RG</div>
-        <div>Our Research Group</div>
+        <img src="https://raw.githubusercontent.com/BRAIN-Lab-AI/.github/main/profile/BRAINLab.png" alt="BRAIN Lab logo" />
+        <span>BRAIN Lab</span>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Research</a></li>
-          <li><a href="#pubs">Publications</a></li>
-          <li><a href="#people">People</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#openings" class="btn">Openings</a></li>
-        </ul>
-      </nav>
-    </div>
+      <div class="sp"></div>
+      <a href="index.html">Home</a>
+      <a href="people.html">People</a>
+      <a href="projects.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero container">
-      <div class="kicker">University / Institute Name</div>
-      <h1>Intelligent Sensing & Vision Lab</h1>
-      <p>
-        We develop machine learning and signal processing methods for healthcare, computer vision, and human-centered AI. Our current focus includes microwave imaging for stroke detection, 3D/4D facial expression analysis, and multimodal vision-language models.
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="#openings">Join us</a>
-        <a class="btn" href="#pubs">Read our papers</a>
-      </div>
-    </section>
-
-    <section id="about" class="container">
-      <h2>About</h2>
-      <p class="sub">What we do and why it matters</p>
-      <p>
-        Our group advances foundational and applied research at the intersection of sensing, machine learning, and human health. We collaborate with clinical and industry partners to translate algorithms into real-world impact, with open-source tools and reproducible science as core principles.
-      </p>
-    </section>
-
-    <section id="projects" class="container">
-      <h2>Research</h2>
-      <p class="sub">Current projects and directions</p>
-      <div class="grid">
-        <article class="card col-4">
-          <h3>Microwave Imaging for Stroke</h3>
-          <div class="meta">Signal processing • Tomographic reconstruction</div>
-          <p>Fast brain imaging from multi-antenna S-parameters (S11, S21…) using physics-informed learning for early stroke detection.</p>
-          <p><a href="#">Project page</a></p>
-        </article>
-        <article class="card col-4">
-          <h3>3D/4D Facial Expression Recognition</h3>
-          <div class="meta">Vision-language models • Multiview</div>
-          <p>Self-supervised multi-view representation learning for robust emotion understanding across views and time.</p>
-          <p><a href="#">Dataset / code</a></p>
-        </article>
-        <article class="card col-4">
-          <h3>Healthcare AI for Insurers</h3>
-          <div class="meta">NLP • Decision support</div>
-          <p>Automating pre-authorization and claims review with trustworthy AI systems to reduce delays and improve outcomes.</p>
-          <p><a href="#">Whitepaper</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="pubs" class="container">
-      <h2>Publications</h2>
-      <p class="sub">Selected, with links to PDFs and code</p>
+    <section class="hero">
       <div class="card">
-        <ol>
-          <li>
-            <strong>SMILE-VLM: Self-Supervised Multi-View Representation Learning for 3D/4D Facial Expression Recognition</strong><br>
-            <span class="meta">A. YourName, B. Collaborator — 2025. <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></span>
-          </li>
-          <li>
-            <strong>Microwave Imaging for Rapid Stroke Assessment from S-Parameters</strong><br>
-            <span class="meta">C. YourName, D. Collaborator — 2025. <a href="#">PDF</a> · <a href="#">Code</a></span>
-          </li>
-          <li>
-            <strong>Knowledge Distillation in Medical Imaging: A Survey</strong><br>
-            <span class="meta">E. YourName et al. — 2024. <a href="#">PDF</a> · <a href="#">arXiv</a></span>
-          </li>
-        </ol>
+        <h1>Breakthrough Research in Next Gen AI Networks Lab</h1>
+        <p>
+          We advance artificial intelligence across computer vision, machine learning, deep learning, vision–language models, affective computing,
+          and generative AI, with applications in healthcare, autonomous systems, environmental monitoring, and HCI
+          (from the lab’s public GitHub overview). :contentReference[oaicite:0]{index=0}
+        </p>
+        <div class="chips">
+          <span class="chip">Computer Vision</span>
+          <span class="chip">Vision–Language Models</span>
+          <span class="chip">Generative AI</span>
+          <span class="chip">Affective Computing</span>
+          <span class="chip">AI for Healthcare</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Latest News</h2>
+        <ul>
+          <li><strong>Aug 2025</strong> — SMILE-VLM accepted to <em>IEEE Access</em>. :contentReference[oaicite:1]{index=1}</li>
+          <li><strong>Aug 2025</strong> — Adrenal gland segmentation paper accepted at AIiH 2025. :contentReference[oaicite:2]{index=2}</li>
+          <li><strong>May 2025</strong> — New PhD researcher (Reem) joins; WiDS poster award. :contentReference[oaicite:3]{index=3}</li>
+        </ul>
+        <p><a href="publications.html">See publications &rarr;</a> • <a href="projects.html">Explore projects &rarr;</a></p>
       </div>
     </section>
 
-    <section id="people" class="container">
-      <h2>People</h2>
-      <p class="sub">We are hiring at all levels</p>
-      <div class="grid">
-        <div class="card col-6 person">
-          <div class="avatar" aria-hidden="true">PI</div>
-          <div>
-            <h3>Prof. Principal Investigator</h3>
-            <div class="meta">Email: <a href="mailto:pi@example.edu">pi@example.edu</a> · <a href="#">Google Scholar</a> · <a href="#">GitHub</a></div>
-            <p>Leads the group. Research in sensing, inverse problems, and multimodal learning.</p>
-          </div>
-        </div>
-        <div class="card col-6 person">
-          <div class="avatar" aria-hidden="true">M1</div>
-          <div>
-            <h3>Graduate Student</h3>
-            <div class="meta"><a href="#">Homepage</a> · <a href="#">Scholar</a></div>
-            <p>3D/4D emotion recognition and VLMs.</p>
-          </div>
-        </div>
-        <div class="card col-6 person">
-          <div class="avatar" aria-hidden="true">M2</div>
-          <div>
-            <h3>Graduate Student</h3>
-            <div class="meta"><a href="#">Homepage</a></div>
-            <p>Microwave imaging and reconstruction.</p>
-          </div>
-        </div>
-        <div class="card col-6 person">
-          <div class="avatar" aria-hidden="true">RA</div>
-          <div>
-            <h3>Research Assistant</h3>
-            <div class="meta"><a href="#">GitHub</a></div>
-            <p>Tooling, datasets, and benchmarks.</p>
-          </div>
-        </div>
+    <section class="grid">
+      <div class="card">
+        <h3>People</h3>
+        <p>Founder & Director: <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">Dr. Muzammil Behzad</a>. Meet our PhD, MS, and BS researchers. :contentReference[oaicite:4]{index=4}</p>
+        <p><a href="people.html">View members &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3>Research Projects</h3>
+        <p>A selection: FABLE (LLM fairness), Enhanced K-Replay (knowledge-rich captioning), medical imaging, GANs for brain MRI, underwater image enhancement, and more. :contentReference[oaicite:5]{index=5}</p>
+        <p><a href="projects.html">Browse projects &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3>Publications & Highlights</h3>
+        <p>Recent acceptances and activities are listed on our org page news. :contentReference[oaicite:6]{index=6}</p>
+        <p><a href="publications.html">Read more &rarr;</a></p>
       </div>
     </section>
 
-    <section id="news" class="container">
-      <h2>News</h2>
-      <p class="sub">Recent updates</p>
-      <div class="grid">
-        <div class="card col-12">
-          <ul>
-            <li><strong>Sep 2025:</strong> Our paper on SMILE-VLM is accepted—congrats team!</li>
-            <li><strong>Aug 2025:</strong> Talk: “Vision-Language Models in the Age of Multimodal AI.”</li>
-            <li><strong>Jun 2025:</strong> Research grant awarded for stroke detection via microwave imaging.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="openings" class="container">
-      <h2>Open Positions</h2>
-      <p class="sub">PhD, MSc, RAs, and interns</p>
-      <div class="grid">
-        <div class="card col-12">
-          <p>
-            We welcome applicants with backgrounds in machine learning, computer vision, signal processing, and biomedical engineering. To apply, send your CV, transcripts, and a short statement to <a href="mailto:lab@example.edu">lab@example.edu</a> with subject line <em>“Application: [Your Name] — 2025”</em>.
-          </p>
-          <p class="meta">Tips: include links to code/papers, and mention how your interests align with our projects.</p>
-        </div>
-      </div>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a> • Website: <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">muzammilbehzad.com</a> (as listed on the org page). :contentReference[oaicite:7]{index=7}</p>
+      <p>We welcome collaborations with industry and academia; we’re actively recruiting graduate students and researchers. :contentReference[oaicite:8]{index=8}</p>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Our Research Group · Built with GitHub Pages</p>
+    <div style="max-width:1200px;margin:auto">
+      © <span id="y"></span> BRAIN Lab — Built with GitHub Pages
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>

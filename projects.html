@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRAIN Lab — Research Projects</title>
+  <style>
+    body{margin:0;font-family:Inter,system-ui,Arial;background:#0b1220;color:#e9eef7}
+    a{color:#9be7ff;text-decoration:none} a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(11,18,32,.85);backdrop-filter:blur(8px);border-bottom:1px solid #1c2740}
+    .nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;gap:18px;align-items:center}
+    .sp{flex:1}
+    main{max-width:1100px;margin:28px auto;padding:0 20px}
+    h1{margin:0 0 16px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:#111a2b;border:1px solid #1c2740;border-radius:18px;padding:18px}
+    .tag{display:inline-block;background:#1a2741;border:1px solid #273553;border-radius:999px;padding:4px 10px;margin:4px 8px 0 0;color:#cfe3ff;font-size:.85rem}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html">← Home</a>
+      <div class="sp"></div>
+      <a href="people.html">People</a>
+      <a href="projects.html">Research</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Research Projects</h1>
+    <p>Selected projects from the public repositories. :contentReference[oaicite:20]{index=20}</p>
+
+    <section class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/BRAIN-Lab-AI/FABLE-Fairness-and-Bias-in-LLM-Evaluation" target="_blank" rel="noopener">FABLE: Fairness & Bias in LLM Evaluation</a></h3>
+        <p>A benchmark to systematically evaluate fairness and bias in open-source LLMs (Ollama), with prompts, evaluation, and results. :contentReference[oaicite:21]{index=21}</p>
+        <div>
+          <span class="tag">LLMs</span><span class="tag">Benchmark</span><span class="tag">Fairness</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/BRAIN-Lab-AI/Enhanced-K-Replay" target="_blank" rel="noopener">Enhanced K-Replay: Knowledge-Rich Image Captioning</a></h3>
+        <p>Extends K-Replay with beam search, attention, schedulers for better pseudo-captions and knowledge retention. Includes report, slides, and code. :contentReference[oaicite:22]{index=22}</p>
+        <div>
+          <span class="tag">Vision-Language</span><span class="tag">Image Captioning</span><span class="tag">NLP+CV</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/BRAIN-Lab-AI/GANs-for-Brain-Tumor-Image-Generation" target="_blank" rel="noopener">GANs for Brain Tumor MRI Generation</a></h3>
+        <p>DC-GAN-based synthetic MRI generation for data augmentation in tumor classification pipelines. :contentReference[oaicite:23]{index=23}</p>
+        <div>
+          <span class="tag">Medical Imaging</span><span class="tag">GANs</span><span class="tag">Data Augmentation</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/BRAIN-Lab-AI/AeroAdapt-GAN" target="_blank" rel="noopener">AeroAdapt-GAN</a></h3>
+        <p>Domain adaptation for aerial/remote-sensing imagery to boost robustness and generalization in segmentation tasks. :contentReference[oaicite:24]{index=24}</p>
+        <div>
+          <span class="tag">Remote Sensing</span><span class="tag">Domain Adaptation</span><span class="tag">GANs</span>
+        </div>
+      </div>
+
+      <!-- You can continue adding tiles from the org repos page -->
+    </section>
+  </main>
+</body>
+</html>
