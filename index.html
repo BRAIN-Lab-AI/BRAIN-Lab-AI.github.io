@@ -39,11 +39,11 @@
     .chip{background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:.9rem;color:#0f172a}
 
     /* Images */
-    .hero-logo{display:block;max-width:390px;width:100%;height:auto;margin:24px auto}
+    .hero-logo{display:block;max-width:600px;width:100%;height:auto;margin:24px auto}
     .group{
       display:block;
       width:100%;         /* Full width */
-      max-width:1000px;   /* 🔧 Change this to scale the group photo (e.g., 800px or 100%) */
+      max-width:1000px;   /* 🔧 CHANGE THIS NUMBER to scale the group photo */
       margin:0 auto;
       height:auto;
       border-radius:16px;
@@ -52,27 +52,8 @@
     }
 
     /* Research + News grid */
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      align-items:stretch;           /* 📏 Make columns equal height */
-    }
-    .grid > .card{
-      display:flex;                  /* allow children to stretch */
-      flex-direction:column;
-    }
-    .news-box{
-      /* max-height removed to allow stretching with the card */
-      height:100%;                   /* fill available card height */
-      min-height:0;                  /* fix for overflowing children in flex */
-      overflow:auto;                 /* keep internal scroll for long lists */
-      padding-right:6px;
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:14px;
-      background:#fff;
-    }
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .news-box{max-height:260px;overflow:auto;padding-right:6px;border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff}
     .news-box ul{margin:0;padding-left:18px}
     .news-box li{margin:6px 0}
 
