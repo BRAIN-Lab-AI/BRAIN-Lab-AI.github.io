@@ -40,7 +40,16 @@
 
     /* Images */
     .hero-logo{display:block;max-width:390px;width:100%;height:auto;margin:24px auto}
-    .group{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--border);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+    .group{
+      display:block;
+      width:100%;         /* Full width */
+      max-width:1000px;   /* 🔧 CHANGE THIS NUMBER to scale the group photo */
+      margin:0 auto;
+      height:auto;
+      border-radius:16px;
+      border:1px solid var(--border);
+      box-shadow:0 1px 2px rgba(0,0,0,.03)
+    }
 
     /* Research + News grid */
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -102,8 +111,75 @@
 
   <!-- Main content container (research + news side-by-side) -->
   <main>
-    <!-- same research areas and news grid as before -->
+    <section class="grid">
+      <div class="card">
+        <h2>Research Areas</h2>
+        <p class="muted">Our primary research interests include:</p>
+        <ul>
+          <li><strong>Anything AI:</strong> Exploring all aspects of AI</li>
+          <li><strong>Computer Vision:</strong> Object detection, scene understanding, and image segmentation</li>
+          <li><strong>Machine Learning and Deep Learning:</strong> Model development, neural networks, and representation learning</li>
+          <li><strong>Vision-Language Models:</strong> Combining vision and language understanding for enhanced context</li>
+          <li><strong>Affective Computing:</strong> Recognizing and interpreting emotions from facial expressions and gestures</li>
+          <li><strong>Generative AI:</strong> Exploring GANs, diffusion models, and synthetic data generation</li>
+          <li><strong>Human-Computer Interaction (HCI):</strong> Enhancing user experiences with intelligent systems</li>
+          <li><strong>AI for Healthcare:</strong> Innovative AI based clinical solutions for healthcare</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>News</h2>
+        <div class="news-box" role="region" aria-label="BRAIN Lab news (scrollable)">
+          <ul>
+            <li>2025.08: 📣 Dr. Muzammil's paper titled "SMILE-VLM..." got accepted in IEEE Access.</li>
+            <li>2025.08: 📣 Our paper on "Prompt-Guided Patch UNet-VAE..." accepted in AIiH 2025.</li>
+            <li>2025.05: 📣 Reem started as PhD researcher on generative AI for image captioning.</li>
+            <li>2025.05: 📣 Team (Thuraya & Sana) won 2nd place WiDS 2025 poster comp.</li>
+            <li>2025.04: 📣 Safa started PhD research on generative AI for medical 3D data.</li>
+            <li>2025.04: 📣 Hania admitted to PhD program at KFUPM.</li>
+            <li>2025.04: 📣 Thuraya admitted to MS program at KFUPM.</li>
+            <li>2025.04: 📣 Team’s poster accepted in WiDS 2025 poster comp, KFUPM.</li>
+            <li>2025.04: 📣 Dr. Muzammil’s paper accepted at FG 2025, Florida, US.</li>
+            <li>2025.04: 📣 Sana’s poster accepted at SRCAC 2025, Abu Dhabi.</li>
+            <li>2025.04: 📣 Abdulmobeen’s poster accepted at SRCAC 2025, Abu Dhabi.</li>
+            <li>2025.02: 📣 Funded project on ocular neoplasia differentiation approved.</li>
+            <li>2025.02: 📣 Dr. Muzammil participated in LEAP Conference, Riyadh.</li>
+            <li>2025.02: 📣 Hania started as visiting researcher on organ segmentation.</li>
+            <li>2025.02: 📣 Funded project on VLMs for emotion recognition approved.</li>
+            <li>2025.01: 📣 Abdulmobeen started undergrad research on rare object detection.</li>
+            <li>2025.01: 📣 Thuraya visiting researcher on VLM explainability.</li>
+            <li>2025.01: 📣 Abdulrazaq undergrad research on underwater transformer models.</li>
+            <li>2025.01: 📣 Sana undergrad research on explainability for med segmentation.</li>
+            <li>2024.11: 📣 Seminar on 3D/4D faces (KFUPM).</li>
+            <li>2024.11: 📣 Afraah’s poster accepted at AITS poster comp, KFUPM.</li>
+            <li>2024.10: 📣 Afraah’s poster accepted at JRCAI, KFUPM.</li>
+            <li>2024.09: 📣 Dr. Muzammil at SMILE Conf., KFUPM.</li>
+            <li>2024.10: 📣 Alaa started MS research on VLMs for segmentation.</li>
+            <li>2024.09: 📣 Dr. Muzammil at Global AI GAIN Summit, Riyadh.</li>
+            <li>2024.09: 📣 Afraah started MS research on underwater visual enhancement.</li>
+            <li>2024.09: 📣 Dr. Muzammil affiliated with SDAIA-KFUPM JRC-AI.</li>
+            <li>2024.09: 📣 Appointed as Mentor for KFUPM students.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Contact Section -->
+  <section class="fullbleed">
+    <div class="wrap">
+      <div class="card">
+        <h2>Looking Forward to Collaboration</h2>
+        <p>We encourage collaboration opportunities from industrial and academic partners. We are actively looking for graduate students, postdocs and researchers to join the team.</p>
+
+        <h3>Get in Touch</h3>
+        <p>If you are interested in working with us, please reach out.</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a></p>
+        <p><strong>Website:</strong> <a href="https://brain-lab-ai.github.io/">BRAIN Lab</a></p>
+        <p>Thank you for visiting BRAIN Lab’s page! We look forward to advancing the field of artificial intelligence together.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div style="max-width:1100px;margin:0 auto;">
