@@ -4,35 +4,95 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BRAIN Lab — Breakthrough Research in Next Gen AI Networks Lab</title>
-  <meta name="description" content="BRAIN Lab: AI, ML, Deep Learning, Computer Vision, VLMs, Generative AI, Affective Computing, AI for Healthcare." />
-  <link rel="icon" href="https://raw.githubusercontent.com/BRAIN-Lab-AI/.github/main/profile/BRAINLogo.png" />
+  <meta name="description" content="BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab" />
+  <link rel="icon" href="assets/brain-logo.png" />
   <style>
-    :root { --bg:#0b1220; --card:#111a2b; --text:#e9eef7; --muted:#b8c2d9; --acc:#66e3ff; --chip:#1a2741; --link:#9be7ff; }
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1220,#0b1326);color:var(--text)}
-    a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
-    header{position:sticky;top:0;background:rgba(11,18,32,.85);backdrop-filter:blur(8px);border-bottom:1px solid #1c2740;z-index:10}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;gap:18px;align-items:center}
-    .nav .sp{flex:1}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand img{width:36px;height:36px;border-radius:8px}
-    main{max-width:1200px;margin:32px auto;padding:0 20px;display:grid;gap:28px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-    .card{background:var(--card);border:1px solid #1c2740;border-radius:18px;padding:22px}
-    h1{margin:0 0 10px;font-size:2rem} h2{margin:0 0 12px;font-size:1.25rem}
-    p{color:var(--muted);line-height:1.6}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{background:var(--chip);border:1px solid #273553;color:#d8e6ff;padding:6px 10px;border-radius:20px;font-size:.9rem}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .grid .card h3{margin:0 0 6px;font-size:1.05rem}
-    footer{border-top:1px solid #1c2740;color:var(--muted);padding:24px 20px;margin-top:20px}
-    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #0ea5e9;
+      --border: #e5e7eb;
+      --chip: #f1f5f9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      max-width: 1100px; margin: 0 auto; padding: 12px 20px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+    .brand img { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; }
+    .sp { flex: 1; }
+    .nav a { color: var(--text); opacity: .8; font-weight: 500; }
+    .nav a:hover { opacity: 1; }
+
+    /* Layout */
+    main { max-width: 1100px; margin: 28px auto; padding: 0 20px; display: grid; gap: 28px; }
+    .hero {
+      display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center;
+    }
+    .card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    h1 { margin: 0 0 8px; line-height: 1.2; }
+    h2 { margin: 0 0 8px; }
+    p.lead { color: var(--muted); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { background: var(--chip); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: .9rem; color: #0f172a; }
+
+    .media {
+      display: grid; grid-template-rows: auto 1fr; gap: 12px; justify-items: center;
+    }
+    .media img.logo { max-width: 220px; height: auto; }
+    .media img.group { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .muted { color: var(--muted); }
+
+    /* News box (scrollable) */
+    .news-box {
+      max-height: 260px; overflow: auto; padding-right: 6px;
+      border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+      background: #fff;
+    }
+    .news-box ul { margin: 0; padding-left: 18px; }
+    .news-box li { margin: 6px 0; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 24px 20px; color: var(--muted); }
+
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <nav class="nav">
       <div class="brand">
-        <img src="https://raw.githubusercontent.com/BRAIN-Lab-AI/.github/main/profile/BRAINLab.png" alt="BRAIN Lab logo" />
+        <!-- Replace with your uploaded logo -->
+        <img class="logo" src="assets/brain-logo.png" alt="BRAIN Lab logo" />
         <span>BRAIN Lab</span>
       </div>
       <div class="sp"></div>
@@ -45,63 +105,108 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="card">
-        <h1>Breakthrough Research in Next Gen AI Networks Lab</h1>
-        <p>
-          We advance artificial intelligence across computer vision, machine learning, deep learning, vision–language models, affective computing,
-          and generative AI, with applications in healthcare, autonomous systems, environmental monitoring, and HCI
-          (from the lab’s public GitHub overview). :contentReference[oaicite:0]{index=0}
+        <h1>BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab</h1>
+        <p class="lead">
+          Welcome to the BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab! We are a research lab focused on advancing the fields of artificial intelligence, classical machine learning, deep learning, and computer vision - basically a lab with versatility and openness to exploring all aspects of AI. Our lab explores innovative methods to enable machines to perceive, understand, and interpret visual information from the world around them. Our works have applications in various domains, including healthcare and wellbeing, autonomous systems, environmental monitoring, and human-computer interaction.
         </p>
-        <div class="chips">
+        <p>
+          <strong>Founder and Director:</strong>
+          <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">Dr. Muzammil Behzad</a>
+        </p>
+        <div class="chips" aria-label="Research tags">
+          <span class="chip">AI</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Deep Learning</span>
           <span class="chip">Computer Vision</span>
-          <span class="chip">Vision–Language Models</span>
+          <span class="chip">VLMs</span>
           <span class="chip">Generative AI</span>
-          <span class="chip">Affective Computing</span>
+          <span class="chip">HCI</span>
           <span class="chip">AI for Healthcare</span>
         </div>
       </div>
-      <div class="card">
-        <h2>Latest News</h2>
-        <ul>
-          <li><strong>Aug 2025</strong> — SMILE-VLM accepted to <em>IEEE Access</em>. :contentReference[oaicite:1]{index=1}</li>
-          <li><strong>Aug 2025</strong> — Adrenal gland segmentation paper accepted at AIiH 2025. :contentReference[oaicite:2]{index=2}</li>
-          <li><strong>May 2025</strong> — New PhD researcher (Reem) joins; WiDS poster award. :contentReference[oaicite:3]{index=3}</li>
-        </ul>
-        <p><a href="publications.html">See publications &rarr;</a> • <a href="projects.html">Explore projects &rarr;</a></p>
+
+      <div class="media">
+        <!-- Replace with your uploaded images -->
+        <img class="logo" src="assets/brain-logo.png" alt="BRAIN Lab logo" />
+        <img class="group" src="assets/group-photo.jpg" alt="BRAIN Lab group photo" />
       </div>
     </section>
 
+    <!-- Research Areas + News -->
     <section class="grid">
       <div class="card">
-        <h3>People</h3>
-        <p>Founder & Director: <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">Dr. Muzammil Behzad</a>. Meet our PhD, MS, and BS researchers. :contentReference[oaicite:4]{index=4}</p>
-        <p><a href="people.html">View members &rarr;</a></p>
+        <h2>Research Areas</h2>
+        <p class="muted">Our primary research interests include:</p>
+        <ul>
+          <li><strong>Anything AI:</strong> Exploring all aspects of AI</li>
+          <li><strong>Computer Vision:</strong> Object detection, scene understanding, and image segmentation</li>
+          <li><strong>Machine Learning and Deep Learning:</strong> Model development, neural networks, and representation learning</li>
+          <li><strong>Vision-Language Models:</strong> Combining vision and language understanding for enhanced context</li>
+          <li><strong>Affective Computing:</strong> Recognizing and interpreting emotions from facial expressions and gestures</li>
+          <li><strong>Generative AI:</strong> Exploring GANs, diffusion models, and synthetic data generation</li>
+          <li><strong>Human-Computer Interaction (HCI):</strong> Enhancing user experiences with intelligent systems</li>
+          <li><strong>AI for Healthcare:</strong> Innovative AI based clinical solutions for healthcare</li>
+        </ul>
       </div>
+
       <div class="card">
-        <h3>Research Projects</h3>
-        <p>A selection: FABLE (LLM fairness), Enhanced K-Replay (knowledge-rich captioning), medical imaging, GANs for brain MRI, underwater image enhancement, and more. :contentReference[oaicite:5]{index=5}</p>
-        <p><a href="projects.html">Browse projects &rarr;</a></p>
-      </div>
-      <div class="card">
-        <h3>Publications & Highlights</h3>
-        <p>Recent acceptances and activities are listed on our org page news. :contentReference[oaicite:6]{index=6}</p>
-        <p><a href="publications.html">Read more &rarr;</a></p>
+        <h2>News</h2>
+        <div class="news-box" role="region" aria-label="BRAIN Lab news (scrollable)">
+          <ul>
+            <li>2025.08: 📣 Dr. Muzammil's paper titled "SMILE-VLM: Self-Supervised Multi-View Representation Learning using Vision-Language Model for 3D/4D Facial Expression Recognition" got accepted in IEEE Access.</li>
+            <li>2025.08: 📣 Our paper titled "Prompt-Guided Patch UNet-VAE with Adversarial Supervision for Adrenal Gland Segmentation in Computed Tomography Medical Images" got accepted in International Conference on Artificial Intelligence in Healthcare (AIiH 2025).</li>
+            <li>2025.05: 📣 Reem started working as a PhD researcher on generative AI for real-world knowledge image captioning</li>
+            <li>2025.05: 📣 Our team (Thuraya and Sana) has won the 2nd place in the poster competition in Women in Data Science (WiDs 2025) conference.</li>
+            <li>2025.04: 📣 Safa started working as a PhD researcher on generative AI for medical 3D data.</li>
+            <li>2025.04: 📣 Hania got admitted to PhD program at KFUPM, Saudi Arabia.</li>
+            <li>2025.04: 📣 Thuraya got admitted to MS program at KFUPM, Saudi Arabia.</li>
+            <li>2025.04: 📣 Our team's (Sana and Thuraya) poster accepted in Women in Data Science (WiDS) 2025 poster competition in KFUPM, Saudi Arabia.</li>
+            <li>2025.04: 📣 Dr. Muzammil's paper accepted in 19th IEEE Int. Conf. on Automatic Face and Gesture Recognition 2025, Florida, US.</li>
+            <li>2025.04: 📣 Sana's poster accepted in 16th Student Research Conference on Applied Computing 2025, Abu Dhabi, UAE.</li>
+            <li>2025.04: 📣 Abdulmobeen's poster accepted in 16th Student Research Conference on Applied Computing 2025, Abu Dhabi, UAE.</li>
+            <li>2025.02: 📣 Dr. Muzammil funded project on AI models for multimodal based differentiation of ocular neoplasia as PI is approved.</li>
+            <li>2025.02: 📣 Dr. Muzammil participated in LEAP Conference in Riyadh, Saudi Arabia.</li>
+            <li>2025.02: 📣 Hania started working as a visiting researcher on multiple organ segmentation and medical analysis.</li>
+            <li>2025.02: 📣 Dr. Muzammil's funded project on vision language model for emotion recognition as PI approved.</li>
+            <li>2025.01: 📣 Abdulmobeen started working as an undergrad researcher on tackling data imbalance in rare object detection.</li>
+            <li>2025.01: 📣 Thuraya started working as a visiting researcher on explainability of vision language models</li>
+            <li>2025.01: 📣 Abdulrazaq started working as an undergrad researcher on transformer models for underwater image enhancement.</li>
+            <li>2025.01: 📣 Sana started working as an undergrad researcher on explainability for medical image segmentation.</li>
+            <li>2024.11: 📣 Dr. Muzammil gave a seminar on emotion recogniton from 3D/4D faces in KFUPM, Saudi Arabia.</li>
+            <li>2024.11: 📣 Afraah's poster accepted in AITS poster competition in KFUPM, Saudi Arabia.</li>
+            <li>2024.10: 📣 Afraah's poster accepted in JRCAI poster competition in KFUPM, Saudi Arabia.</li>
+            <li>2024.09: 📣 Dr. Muzammil participated in Int. Conf. on Smart Mobility and Logistics Ecosystem (SMILE) in KFUPM, Saudi Arabia.</li>
+            <li>2024.10: 📣 Alaa started working as an MS researcher on vision language models for semantic segmentation.</li>
+            <li>2024.09: 📣 Dr. Muzammil participated in Global AI GAIN Summit in Riyadh, Saudi Arabia.</li>
+            <li>2024.09: 📣 Afraah started working as an MS researcher on underwater visual enhancements.</li>
+            <li>2024.09: 📣 Dr. Muzammil affiliated as a research fellow with SDAIA-KFUPM Joint Research Centre on AI (JRC-AI), Saudi Arabia.</li>
+            <li>2024.09: 📣 Dr. Muzammil officially appointed as Mentor for the students of KFUPM, Saudi Arabia.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a> • Website: <a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">muzammilbehzad.com</a> (as listed on the org page). :contentReference[oaicite:7]{index=7}</p>
-      <p>We welcome collaborations with industry and academia; we’re actively recruiting graduate students and researchers. :contentReference[oaicite:8]{index=8}</p>
+      <h2>Looking Forward to Collaboration</h2>
+      <p>We encourage collaboration opportunities from industrial and academic partners. We are actively looking for graduate students, postdocs and researchers to join the team.</p>
+
+      <h3>Get in Touch</h3>
+      <p>If you are interested in working with us, please reach out.</p>
+      <p><strong>Contact Email:</strong> <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a></p>
+      <p><strong>Website:</strong> <a href="https://brain-lab-ai.github.io/">BRAIN Lab</a></p>
+      <p>Thank you for visiting BRAIN Lab’s page! We look forward to advancing the field of aritificial intelligence together.</p>
     </section>
   </main>
 
   <footer>
-    <div style="max-width:1200px;margin:auto">
+    <div style="max-width:1100px;margin:0 auto;">
       © <span id="y"></span> BRAIN Lab — Built with GitHub Pages
     </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
