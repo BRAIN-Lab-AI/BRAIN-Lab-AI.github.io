@@ -15,7 +15,7 @@
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* Header (no tabs now) */
+    /* Header */
     header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
     .nav{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center}
     .brand{font-weight:700;font-size:0.95rem;color:var(--text)}
@@ -37,7 +37,7 @@
     /* Images */
     .hero-logo{display:block;max-width:600px;width:100%;height:auto;margin:24px auto}
     .group{
-      display:block;width:100%;max-width:1000px; /* change this number to scale the group photo (e.g., 800px or 100%) */
+      display:block;width:100%;max-width:1000px;
       margin:0 auto;height:auto;border-radius:16px;border:1px solid var(--border);box-shadow:0 1px 2px rgba(0,0,0,.03)
     }
 
@@ -50,8 +50,13 @@
 
     /* People (members) */
     .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .person{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px}
-    .person .role{color:var(--muted);font-size:.95rem;margin-top:2px}
+    .person{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
+    .person .role{color:var(--muted);font-size:.95rem;margin-top:4px}
+    .person-photo{
+      width:100%;max-width:120px;height:120px;object-fit:cover;
+      border-radius:50%;display:block;margin:0 auto 10px;
+      border:2px solid var(--border);
+    }
 
     /* Projects */
     .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -73,21 +78,21 @@
   </style>
 </head>
 <body>
-  <!-- Header (title only) -->
+  <!-- Header -->
   <header>
     <nav class="nav">
       <div class="brand">BRAIN Lab: Breakthrough Research in Next Gen AI Networks Lab</div>
     </nav>
   </header>
 
-  <!-- Full-width logo -->
+  <!-- Logo -->
   <section class="fullbleed">
     <div class="wrap">
       <img class="hero-logo" src="assets/brain-logo.png" alt="BRAIN Lab logo full-width" />
     </div>
   </section>
 
-  <!-- Full-width welcome message -->
+  <!-- Welcome -->
   <section class="fullbleed">
     <div class="wrap">
       <div class="card">
@@ -104,16 +109,16 @@
     </div>
   </section>
 
-  <!-- Full-width group photo -->
+  <!-- Group Photo -->
   <section class="fullbleed">
     <div class="wrap">
       <img class="group" src="assets/group-photo.jpg" alt="BRAIN Lab group photo" />
     </div>
   </section>
 
-  <!-- Research Areas + News -->
+  <!-- Research + News -->
   <main>
-    <section class="grid" id="research">
+    <section class="grid">
       <div class="card">
         <h2>Research Areas</h2>
         <p class="muted">Our primary research interests include:</p>
@@ -131,123 +136,72 @@
 
       <div class="card">
         <h2>News</h2>
-        <div class="news-box" role="region" aria-label="BRAIN Lab news (scrollable)">
+        <div class="news-box">
           <ul>
-            <li>2025.08: 📣 Dr. Muzammil's paper titled "SMILE-VLM..." got accepted in IEEE Access.</li>
-            <li>2025.08: 📣 Our paper on "Prompt-Guided Patch UNet-VAE..." accepted in AIiH 2025.</li>
-            <li>2025.05: 📣 Reem started as PhD researcher on generative AI for image captioning.</li>
-            <li>2025.05: 📣 Team (Thuraya & Sana) won 2nd place WiDS 2025 poster comp.</li>
+            <li>2025.08: 📣 Dr. Muzammil's paper "SMILE-VLM..." accepted in IEEE Access.</li>
+            <li>2025.08: 📣 Paper on "Prompt-Guided Patch UNet-VAE..." accepted in AIiH 2025.</li>
+            <li>2025.05: 📣 Reem started as PhD researcher on generative AI for captioning.</li>
+            <li>2025.05: 📣 Thuraya & Sana won 2nd place in WiDS 2025 poster comp.</li>
             <li>2025.04: 📣 Safa started PhD research on generative AI for medical 3D data.</li>
             <li>2025.04: 📣 Hania admitted to PhD program at KFUPM.</li>
             <li>2025.04: 📣 Thuraya admitted to MS program at KFUPM.</li>
-            <li>2025.04: 📣 Team’s poster accepted in WiDS 2025 poster comp, KFUPM.</li>
             <li>2025.04: 📣 Dr. Muzammil’s paper accepted at FG 2025, Florida, US.</li>
-            <li>2025.04: 📣 Sana’s poster accepted at SRCAC 2025, Abu Dhabi.</li>
-            <li>2025.04: 📣 Abdulmobeen’s poster accepted at SRCAC 2025, Abu Dhabi.</li>
-            <li>2025.02: 📣 Funded project on ocular neoplasia differentiation approved.</li>
-            <li>2025.02: 📣 Dr. Muzammil participated in LEAP Conference, Riyadh.</li>
-            <li>2025.02: 📣 Hania started as visiting researcher on organ segmentation.</li>
-            <li>2025.02: 📣 Funded project on VLMs for emotion recognition approved.</li>
-            <li>2025.01: 📣 Abdulmobeen started undergrad research on rare object detection.</li>
-            <li>2025.01: 📣 Thuraya visiting researcher on VLM explainability.</li>
-            <li>2025.01: 📣 Abdulrazaq undergrad research on underwater transformer models.</li>
-            <li>2025.01: 📣 Sana undergrad research on explainability for med segmentation.</li>
-            <li>2024.11: 📣 Seminar on 3D/4D faces (KFUPM).</li>
-            <li>2024.11: 📣 Afraah’s poster accepted at AITS poster comp, KFUPM.</li>
-            <li>2024.10: 📣 Afraah’s poster accepted at JRCAI, KFUPM.</li>
-            <li>2024.09: 📣 Dr. Muzammil at SMILE Conf., KFUPM.</li>
-            <li>2024.10: 📣 Alaa started MS research on VLMs for segmentation.</li>
-            <li>2024.09: 📣 Dr. Muzammil at Global AI GAIN Summit, Riyadh.</li>
-            <li>2024.09: 📣 Afraah started MS research on underwater visual enhancement.</li>
-            <li>2024.09: 📣 Dr. Muzammil affiliated with SDAIA-KFUPM JRC-AI.</li>
-            <li>2024.09: 📣 Appointed as Mentor for KFUPM students.</li>
+            <li>... (rest of news)</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- People / Members -->
-    <section class="card" id="people">
+    <!-- People -->
+    <section class="card">
       <h2>People</h2>
-      <p class="muted">Founder & Director and current researchers.</p>
       <div class="people-grid">
         <div class="person">
-          <h3><a href="https://www.muzammilbehzad.com/" target="_blank" rel="noopener">Dr. Muzammil Behzad</a></h3>
+          <img src="assets/people/muzammil.jpg" alt="Dr. Muzammil Behzad" class="person-photo" />
+          <h3><a href="https://www.muzammilbehzad.com/" target="_blank">Dr. Muzammil Behzad</a></h3>
           <div class="role">Founder & Director</div>
         </div>
-
-        <div class="person"><h3>Safa Asgar</h3><div class="role">PhD Researcher — Generative AI, 3D</div></div>
-        <div class="person"><h3>Hania Ghouse</h3><div class="role">PhD Researcher — VLMs, Multi-organ analysis</div></div>
-        <div class="person"><h3>Reem AlJunaid</h3><div class="role">PhD Researcher — Captioning, Generative AI</div></div>
-        <div class="person"><h3>Afraah Shahid</h3><div class="role">MS Researcher — Underwater Enhancement</div></div>
-        <div class="person"><h3>Alaa Dalaq</h3><div class="role">MS Researcher — VLMs, Segmentation</div></div>
-        <div class="person"><h3>Thuraya Alzubaidi</h3><div class="role">MS Researcher — Medical Imaging, XAI</div></div>
-        <div class="person"><h3>Sana Ammar Taffor</h3><div class="role">BS Researcher — Segmentation, XAI</div></div>
-        <div class="person"><h3>Almaan Khan</h3><div class="role">BS Researcher — Rare Object Detection</div></div>
-        <div class="person"><h3>Abdul Razaq</h3><div class="role">BS Researcher — Underwater Enhancement</div></div>
+        <div class="person"><img src="assets/people/safa.jpg" alt="Safa Asgar" class="person-photo" /><h3>Safa Asgar</h3><div class="role">PhD Researcher</div></div>
+        <div class="person"><img src="assets/people/hania.jpg" alt="Hania Ghouse" class="person-photo" /><h3>Hania Ghouse</h3><div class="role">PhD Researcher</div></div>
+        <div class="person"><img src="assets/people/reem.jpg" alt="Reem AlJunaid" class="person-photo" /><h3>Reem AlJunaid</h3><div class="role">PhD Researcher</div></div>
+        <div class="person"><img src="assets/people/afraah.jpg" alt="Afraah Shahid" class="person-photo" /><h3>Afraah Shahid</h3><div class="role">MS Researcher</div></div>
+        <div class="person"><img src="assets/people/alaa.jpg" alt="Alaa Dalaq" class="person-photo" /><h3>Alaa Dalaq</h3><div class="role">MS Researcher</div></div>
+        <div class="person"><img src="assets/people/thuraya.jpg" alt="Thuraya Alzubaidi" class="person-photo" /><h3>Thuraya Alzubaidi</h3><div class="role">MS Researcher</div></div>
+        <div class="person"><img src="assets/people/sana.jpg" alt="Sana Ammar Taffor" class="person-photo" /><h3>Sana Ammar Taffor</h3><div class="role">BS Researcher</div></div>
+        <div class="person"><img src="assets/people/almaan.jpg" alt="Almaan Khan" class="person-photo" /><h3>Almaan Khan</h3><div class="role">BS Researcher</div></div>
+        <div class="person"><img src="assets/people/abdulrazaq.jpg" alt="Abdul Razaq" class="person-photo" /><h3>Abdul Razaq</h3><div class="role">BS Researcher</div></div>
       </div>
     </section>
 
-    <!-- Research Projects -->
-    <section class="card" id="projects">
+    <!-- Projects -->
+    <section class="card">
       <h2>Research Projects</h2>
       <div class="projects-grid">
-        <div class="project">
-          <h3><a href="https://github.com/BRAIN-Lab-AI/FABLE-Fairness-and-Bias-in-LLM-Evaluation" target="_blank" rel="noopener">FABLE: Fairness & Bias in LLM Evaluation</a></h3>
-          <p>Benchmark for evaluating fairness and bias in open-source LLMs (Ollama).</p>
-          <span class="tag">LLMs</span><span class="tag">Benchmark</span><span class="tag">Fairness</span>
-        </div>
-
-        <div class="project">
-          <h3><a href="https://github.com/BRAIN-Lab-AI/Enhanced-K-Replay" target="_blank" rel="noopener">Enhanced K-Replay</a></h3>
-          <p>Knowledge-rich captioning with beam search, attention, and schedulers.</p>
-          <span class="tag">Vision-Language</span><span class="tag">Captioning</span>
-        </div>
-
-        <div class="project">
-          <h3><a href="https://github.com/BRAIN-Lab-AI/GANs-for-Brain-Tumor-Image-Generation" target="_blank" rel="noopener">GANs for Brain Tumor MRI</a></h3>
-          <p>DC-GAN-based synthetic MRI generation for tumor classification pipelines.</p>
-          <span class="tag">Medical Imaging</span><span class="tag">GANs</span>
-        </div>
-
-        <div class="project">
-          <h3><a href="https://github.com/BRAIN-Lab-AI/AeroAdapt-GAN" target="_blank" rel="noopener">AeroAdapt-GAN</a></h3>
-          <p>Domain adaptation for aerial/remote-sensing imagery segmentation.</p>
-          <span class="tag">Remote Sensing</span><span class="tag">Domain Adaptation</span>
-        </div>
+        <div class="project"><h3>FABLE: Fairness & Bias in LLMs</h3><p>Benchmark for evaluating fairness in open-source LLMs.</p><span class="tag">LLMs</span></div>
+        <div class="project"><h3>Enhanced K-Replay</h3><p>Knowledge-rich captioning improvements.</p><span class="tag">Captioning</span></div>
+        <div class="project"><h3>GANs for Brain Tumor MRI</h3><p>GAN-based synthetic MRI data generation.</p><span class="tag">Medical Imaging</span></div>
+        <div class="project"><h3>AeroAdapt-GAN</h3><p>Domain adaptation for aerial imagery segmentation.</p><span class="tag">Remote Sensing</span></div>
       </div>
     </section>
 
     <!-- Publications -->
-    <section class="card" id="publications">
+    <section class="card">
       <h2>Publications & Selected News</h2>
-      <div class="pub">
-        <h3>SMILE-VLM: Self-Supervised Multi-View Representation Learning using VLM for 3D/4D FER</h3>
-        <p><strong>Venue:</strong> IEEE Access (accepted 2025.08).</p>
-      </div>
-      <div class="pub">
-        <h3>Prompt-Guided Patch UNet-VAE with Adversarial Supervision for Adrenal Gland Segmentation</h3>
-        <p><strong>Venue:</strong> International Conference on Artificial Intelligence in Healthcare (AIiH 2025) (accepted 2025.08).</p>
-      </div>
-      <div class="pub">
-        <h3>FG 2025 acceptance</h3>
-        <p><strong>Venue:</strong> 19th IEEE Int. Conf. on Automatic Face and Gesture Recognition (accepted 2025.04).</p>
-      </div>
+      <p><strong>2025.08:</strong> SMILE-VLM accepted in IEEE Access</p>
+      <p><strong>2025.08:</strong> Prompt-Guided UNet-VAE accepted in AIiH 2025</p>
+      <p><strong>2025.04:</strong> FG 2025 acceptance (Florida, US)</p>
     </section>
   </main>
 
-  <!-- Contact Section -->
-  <section class="fullbleed" id="contact">
+  <!-- Contact -->
+  <section class="fullbleed">
     <div class="wrap">
       <div class="card">
         <h2>Looking Forward to Collaboration</h2>
-        <p>We encourage collaboration opportunities from industrial and academic partners. We are actively looking for graduate students, postdocs and researchers to join the team.</p>
-
+        <p>We encourage collaboration with industrial and academic partners. Actively seeking graduate students, postdocs, and researchers.</p>
         <h3>Get in Touch</h3>
-        <p>If you are interested in working with us, please reach out.</p>
-        <p><strong>Contact Email:</strong> <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="mailto:muzammil.behzad@gmail.com">muzammil.behzad@gmail.com</a></p>
         <p><strong>Website:</strong> <a href="https://brain-lab-ai.github.io/">BRAIN Lab</a></p>
-        <p>Thank you for visiting BRAIN Lab’s page! We look forward to advancing the field of artificial intelligence together.</p>
       </div>
     </div>
   </section>
